@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/arapucajs/prettier/compare/v1.0.0...v1.0.1) (2025-06-29)
+
+
+### Bug Fixes
+
+* **deploy:** resolvendo erro para publicacao no npm ([2942614](https://github.com/arapucajs/prettier/commit/2942614c34e7f25c20bd12f33bcaeb0f8c119aa1))
+
 ## 1.0.0 (2025-06-29)
 
 
