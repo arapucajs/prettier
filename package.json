@@ -19,23 +19,19 @@
     "commit": "git-cz",
     "commitlint": "commitlint --edit"
   },
-  "homepage": "https://github.com/adonisjs/prettier-config#readme",
+  "homepage": "https://github.com/arapucajs/prettier#readme",
   "bugs": {
-    "url": "https://github.com/adonisjs/prettier-config/issues"
+    "url": "https://github.com/arapucajs/prettier/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adonisjs/prettier-config.git"
+    "url": "git+https://github.com/arapucajs/prettier.git"
   },
   "keywords": [
     "prettier",
     "adonisjs"
   ],
-  "author": "Julien Ripouteau <julien@ripouteau.com>",
-  "contributors": [
-    "Harminder Virk <virk@adonisjs.com>",
-    "Romain Lanz <romain.lanz@pm.me>"
-  ],
+  "author": "JefteCosta <jefteamorim@gmail.com>",
   "license": "MIT",
   "publishConfig": {
     "provenance": true
