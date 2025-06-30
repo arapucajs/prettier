@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/arapucajs/prettier/compare/v1.0.1...v1.1.0) (2025-06-30)
+
+
+### Features
+
+* **npm:** publicando direto no npm o projeto ([bd8ef17](https://github.com/arapucajs/prettier/commit/bd8ef1734d2b41bc9ee2d72d370d50a08e515eb3))
+
 ## [1.0.1](https://github.com/arapucajs/prettier/compare/v1.0.0...v1.0.1) (2025-06-29)
 
 
