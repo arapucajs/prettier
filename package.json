@@ -1,7 +1,7 @@
 {
   "name": "@arapucajs/prettier",
   "description": "Prettier config preset for ArapucaJS packages and applications",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "type": "module",
   "files": [
     "index.cjs"
