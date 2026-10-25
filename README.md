@@ -1,35 +1,27 @@
 # @arapucajs/prettier
 
-<hr>
-<br />
+Preset compartilhado de opções do [Prettier](https://prettier.io/) usado nos pacotes e aplicações da ArapucaJS.
 
-<div align="center">
-  <h3>Configuração base do Prettier</h3>
-  <p>Regras base do Prettier utilizadas pela equipe do ArapucaJS para pacotes e aplicações.</p>
-</div>
-
-<br />
-
-<div align="center">
-
-[![npm-image]][npm-url] [![license-image]][license-url]
-
-</div>
+[![npm version](https://img.shields.io/npm/v/%40arapucajs%2Fprettier)](https://www.npmjs.com/package/@arapucajs/prettier)
+[![license](https://img.shields.io/github/license/arapucajs/prettier)](./LICENSE)
 
 ## Instalação
 
-Instale o pacote a partir do registro npm.
+Instale o Prettier e o preset como dependências de desenvolvimento do projeto consumidor:
 
 ```sh
-bun add -D @arapucajs/prettier
-
-# Certifique-se também de instalar os seguintes pacotes
-bun add -D prettier
+npm install --save-dev prettier @arapucajs/prettier
 ```
 
-## Uso
+Ou com Bun:
 
-Após a instalação, você pode copiar/colar o bloco de código abaixo dentro do arquivo `package.json`.
+```sh
+bun add -D prettier @arapucajs/prettier
+```
+
+## Configuração
+
+No `package.json` do projeto:
 
 ```json
 {
@@ -37,15 +29,45 @@ Após a instalação, você pode copiar/colar o bloco de código abaixo dentro d
 }
 ```
 
-Nossa configuração base também instala e configura o pacote [prettier-plugin-edgejs](https://github.com/sajansharmanz/prettier-plugin-edgejs) para formatar templates Edge usando o Prettier.
+Execute o formatador instalado no projeto:
 
-<div align="center">
-  <sub>Feito com ❤︎ por <a href="https://github.com/JefteCosta">Jefte Costa</a> 
-</div>
+```sh
+npx prettier --check .
+npx prettier --write .
+```
 
-[npm-image]: https://img.shields.io/npm/v/@aarapucajs/prettier/latest.svg?style=for-the-badge&logo=npm
-[npm-url]: https://www.npmjs.com/package/@arapucajs/prettier/v/latest 'npm'
-[license-url]: LICENSE.md
-[license-image]: https://img.shields.io/github/license/arapucajs/prettier?style=for-the
+## Opções incluídas
 
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+O preset configura:
+
+- vírgulas finais no estilo `es5`;
+- sem ponto e vírgula;
+- aspas simples;
+- indentação com espaços;
+- aspas de propriedades consistentes;
+- espaços dentro de chaves;
+- parênteses sempre em parâmetros de arrow functions;
+- largura preferida de linha de 100 caracteres.
+
+Veja [a referência das opções](docs/references/options.md) para detalhes e valores exatos.
+
+## Templates EdgeJS
+
+O pacote atualmente **não instala nem habilita** `prettier-plugin-edgejs`. A configuração do plugin em `index.cjs` está comentada e o plugin não é uma dependência do pacote. Para formatar templates Edge, instale e configure um plugin compatível diretamente no projeto consumidor.
+
+## Desenvolvimento neste repositório
+
+```sh
+npm install
+npm run lint
+```
+
+`npm test` é atualmente um placeholder e não executa uma suíte de testes. Consulte a [documentação do projeto](docs/README.md), especialmente o [guia de instalação e uso](docs/guides/installation-and-usage.md) e a [referência de scripts e pacote](docs/references/package-and-commands.md).
+
+## Contribuição
+
+Atualize a documentação em `docs/` na mesma alteração sempre que modificar código, opções, dependências, scripts, empacotamento ou compatibilidade. Use Conventional Commits; `npm run commit` inicia o assistente Commitizen.
+
+## Licença
+
+MIT. Consulte [LICENSE](LICENSE).
