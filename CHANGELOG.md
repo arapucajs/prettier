@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/arapucajs/prettier/compare/v1.1.1...v1.2.0) (2026-10-25)
+
+
+### Features
+
+* **package:** atualização de pacotes para o novo prittier ([f45f8a5](https://github.com/arapucajs/prettier/commit/f45f8a5efb0e20e4fca26d90053f3d1c60d90ede))
+
 ## [1.1.1](https://github.com/arapucajs/prettier/compare/v1.1.0...v1.1.1) (2025-06-30)
 
 
