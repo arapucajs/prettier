@@ -4,7 +4,8 @@
   "version": "1.1.0",
   "type": "module",
   "files": [
-    "index.cjs"
+    "index.cjs",
+    "docs"
   ],
   "main": "./index.cjs",
   "exports": {

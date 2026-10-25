@@ -1,24 +1,16 @@
 # Orientações para Claude e agentes de IA
 
-As instruções canônicas estão em [AGENTS.md](./AGENTS.md). Comece pelo índice [docs/README.md](./docs/README.md). Este repositório contém `@jeftelabs/file-generator`, utilitário Node.js/TypeScript para criar buffers fictícios de arquivos em memória para testes.
+As instruções canônicas estão em [AGENTS.md](./AGENTS.md). Comece pelo índice [docs/README.md](./docs/README.md) e leia as páginas relevantes antes de mudar arquivos.
+
+Este repositório publica `@arapucajs/prettier`, um preset de configuração do Prettier. O pacote exporta opções CommonJS por `index.cjs`; não é um formatador independente nem uma CLI. A configuração inclui opções como `trailingComma`, `semi`, `singleQuote`, `quoteProps`, `bracketSpacing`, `arrowParens` e `printWidth`. A linha que carregaria `prettier-plugin-edgejs` está comentada e o plugin não aparece atualmente nas dependências declaradas.
 
 ## Documentação obrigatória
 
-É extremamente obrigatório criar ou atualizar documentação detalhada toda vez que algo novo for criado ou qualquer parte do projeto for modificada. Isso inclui código, API, tipos, testes, arquivos-modelo, configuração, dependências, scripts, build, CI, exemplos e documentos. Atualize na mesma tarefa.
+Crie ou atualize documentação detalhada na mesma tarefa sempre que qualquer parte do projeto for criada ou modificada, incluindo código, configuração, dependências, scripts, lockfiles, empacotamento, CI, exemplos e os próprios documentos.
 
-- Explique comportamento, fluxo, entradas, saídas, efeitos, limites e manutenção para humanos e IAs.
-- Organize páginas em `docs/` como guias, referências, arquitetura e planejamento.
-- Registre cada página nova no índice `docs/README.md`.
-- Atualize o README para mudanças de instalação, formatos, API, compatibilidade ou exemplos.
-- Valide detalhes na implementação e nos testes; documente limites reais dos arquivos gerados.
+- Coloque a documentação em `docs/` e registre cada página em `docs/README.md`.
+- Explique comportamento real, fluxo, entradas, saídas, limites, compatibilidade e manutenção para humanos e IAs.
+- Atualize README e exemplos quando o uso público ou os requisitos mudarem.
+- Verifique as afirmações nos arquivos reais; não perpetue instruções sobre outro pacote.
 
-## Mapa do projeto
-
-- `index.ts`: exporta as funções públicas `generateCsv`, `generateDocx`, `generateGif`, `generateJpg`, `generatePdf`, `generatePng` e `generateXlsx`.
-- `src/files/<formato>/generate.ts`: monta metadados, carrega a fixture quando aplicável e cria o buffer.
-- `src/files/<formato>/fake.*`: bytes iniciais de referência usados na geração e copiados ao build.
-- `src/files/utils.ts`: converte expressões de bytes e preenche/alarga o buffer.
-- `tests/`: verifica tamanhos, MIME, nomes personalizados e reconhecimento dos formatos binários.
-- `package.json`: configura build e os scripts; `copy:files` leva fixtures ao diretório publicado.
-
-Leia a documentação relevante antes de alterar. Não confunda assinatura reconhecível com documento íntegro. Os buffers são dados de teste; documentos e imagens maiores que as fixtures não são conteúdo completo nem são gravados em disco.
+Confira `package.json`, `index.cjs`, `README.md`, `.husky/`, workflows existentes e ambos os lockfiles. Não invente testes ou automações: `npm test` é atualmente um placeholder. Preserve CommonJS no ponto de entrada e use Conventional Commits.
