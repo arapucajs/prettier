@@ -11,12 +11,11 @@
     ".": "./index.cjs"
   },
   "scripts": {
-    "release": "release-it",
     "prepare": "husky install",
     "lint": "prettier --check .",
     "format": "prettier --write .",
     "test": "echo \"No tests specified\" && exit 0",
-    "commit": "git-cz",
+    "commit": "cz",
     "commitlint": "commitlint --edit"
   },
   "homepage": "https://github.com/arapucajs/prettier#readme",
@@ -29,49 +28,19 @@
   },
   "keywords": [
     "prettier",
-    "adonisjs"
+    "arapucajs"
   ],
-  "author": "JefteCosta <jefteamorim@gmail.com>",
+  "author": "Jefte Costa <jefteamorim@gmail.com>",
   "license": "MIT",
   "publishConfig": {
     "provenance": true
   },
-  "release-it": {
-    "git": {
-      "requireCleanWorkingDir": true,
-      "requireUpstream": true,
-      "commitMessage": "chore(release): ${version}",
-      "tagAnnotation": "v${version}",
-      "push": true,
-      "tagName": "v${version}"
-    },
-    "github": {
-      "release": true
-    },
-    "npm": {
-      "publish": true,
-      "skipChecks": true
-    },
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": {
-          "name": "angular"
-        }
-      }
-    }
-  },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
-    "@release-it/conventional-changelog": "^10.0.1",
-    "commitizen": "^4.3.1",
-    "cz-conventional-changelog": "^3.3.0",
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "commitizen": "^4.3.2",
     "husky": "^9.1.7",
-    "prettier": "^3.6.2",
-    "release-it": "^19.0.3"
-  },
-  "dependencies": {
-    "prettier-plugin-edgejs": "^1.0.2"
+    "prettier": "^3.9.10"
   },
   "config": {
     "commitizen": {
